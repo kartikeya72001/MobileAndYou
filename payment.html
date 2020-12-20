@@ -448,15 +448,13 @@ $('.clps').removeClass('collapsed');
         var node = e.target.childNodes[1]
         console.log(e.target.childNodes[1])
       if(count%2==0){
-        console.log("i",j)
-            node.class = "bx-chevron-down"
+            node.className = "bx bx-chevron-up"
       }
       else{
-          node.class = "bx-chevron-up"
-
+          node.className = "bx bx-chevron-down"
       }
+      count++;
     })
-    count++;
   }
   </script>
 
