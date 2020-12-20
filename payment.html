@@ -428,7 +428,7 @@ $('.clps').removeClass('collapsed');
 <script>
   var acc = document.getElementsByClassName("accordion");
   var i;
-  
+  var count = 0;
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
       this.classList.toggle("active");
@@ -439,6 +439,22 @@ $('.clps').removeClass('collapsed');
         panel.style.display = "block";
       }
     });
+  }
+
+  var j;
+  for(var j=0;j<acc.length;j++){
+    acc[j].addEventListener("click", function(){
+      if(count%2==0){
+        var bx = document.getElementsByClassName("bx");
+          bx[j].removeClass("bx-chevron-down");
+          bx[j].addClass("bx-chevron-up");
+      }
+      else{
+          bx[j].removeClass("bx-chevron-up");
+          bx[j].addClass("bx-chevron-down");
+      }
+    })
+    count++;
   }
   </script>
 
