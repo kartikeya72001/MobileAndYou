@@ -442,16 +442,18 @@ $('.clps').removeClass('collapsed');
   }
 
   var j;
+  var bx = document.getElementsByClassName("bx");
   for(var j=0;j<acc.length;j++){
-    acc[j].addEventListener("click", function(){
+    acc[j].addEventListener("click", function(e){
+        var node = e.target.childNodes[1]
+        console.log(e.target.childNodes[1])
       if(count%2==0){
-        var bx = document.getElementsByClassName("bx");
-          bx[j].removeClass("bx-chevron-down");
-          bx[j].addClass("bx-chevron-up");
+        console.log("i",j)
+            node.class = "bx-chevron-down"
       }
       else{
-          bx[j].removeClass("bx-chevron-up");
-          bx[j].addClass("bx-chevron-down");
+          node.class = "bx-chevron-up"
+
       }
     })
     count++;
