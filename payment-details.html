@@ -29,7 +29,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>  </head>
 
   </head>
-  <body>
+  <body style="overflow-x: hidden;">
     <div class="badydiv" style="background-color: rgb(245, 245, 245);">
       <div class="universalDiv" style="background-color: transparent;">
         <div class="container" style="background-color: transparent;">
@@ -156,20 +156,19 @@
             background-color: #ffffff;
             height:4.5rem;
             display:flex;
-            align-items: center;
             justify-content: center;
             flex-direction: column;
             box-shadow: 4px -5px 6px rgba(207, 207, 207, 0.5)">
             <div class="container">
               <div class="row">
                 <div class="col-6">
-                  <div>
-                    <p>Total</p>
+                  <div style="float:left; margin: 0 1rem">
+                    <p style="margin:0 -0.3rem">Total</p>
                     <p style="color: red;">Rupees</p>
                   </div>
                 </div>
                 <div class="col-6">
-                  <button type="button" class="btn btn-danger">Danger</button>
+                  <button type="button" class="btn btn-danger" style="float:right; margin: 0 2rem">Danger</button>
                 </div>
               </div>
             </div>
